@@ -12,8 +12,8 @@
     --white-color: #FFFFFF;
     --gradient-white: #eddebf3d;
     --gradiet-red: #89000973;
-    --gradient-blue: #19587d7e;
-    --grey: #c4c4c4a8;
+    --gradient-blue: #19587d5e;
+    --grey: #c4c4c4b6;
     
 }
 *{
@@ -41,7 +41,17 @@ body{
     color: white;
     font-family: "Space Grotesk";
     font-weight: 300;
-   
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;    
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 .up-bar {
     border-top: #bcbbbd17 4.5px solid;
@@ -136,6 +146,8 @@ nav ul a:hover {
     margin: 0 auto;
     margin-top: 250px;
 }
+
+/*Les logo pour le scrolling*/
 .scroll {
     display: flex;
     align-items: center;
@@ -143,9 +155,13 @@ nav ul a:hover {
     position: fixed;
     right: 30px;
     top: 200px;
+    z-index: 3;
 }
 .scroll .social{
     margin-top: 15px;
+}
+.scroll:hover {
+    filter: invert(4%) sepia(100%) saturate(2511%) hue-rotate(353deg) brightness(104%) contrast(107%);
 }
 /*design de la partie Batman au cinema*/
 #batmancinema {
@@ -169,6 +185,12 @@ nav ul a:hover {
 #batmancinema .personnage {
     text-align: center;
 }
+
+/*zoom de 10% des cartes */
+ .batman-item:hover {
+        transform: scale(1.1);
+}
+
 /*design de la partie Nemesis*/
 #nemesis {
     margin-top: 40px;
@@ -218,6 +240,12 @@ nav ul a:hover {
 .justiceligue {
    margin-left: 100px;
 }
+
+.background-Jusitceligue {
+    position: relative;
+    z-index: 1;/*position de l'image De Justice ligue suivant l'axe z*/
+    
+}
 /*design du multimedia*/
 #multimedia .slider-multimedia{
     display: flex;
@@ -259,10 +287,15 @@ nav ul a:hover {
 #multimedia .yellow {
     color: var(--yellow-light);
 }
+.bande-annonce {
+    margin-bottom: 150px;
+}
 /*design de la partie fomulaire*/
 #contact {
     background: linear-gradient(to right, var(--gradient-white), var(--gradient-blue));
     padding: 70px 0;
+    position: relative;
+    z-index: 1;
 }
 #contact .form{
     width: 50%;
@@ -280,7 +313,7 @@ nav ul a:hover {
 #contact .texte {
     color: var(--grey);
 }
-#contact .form input[type=email], textarea {
+#contact .form input[type=email], textarea  {
     display: block;
     border-top: none;
     border-left: none;
@@ -290,10 +323,23 @@ nav ul a:hover {
     background: none;
     padding: 5px 0;
 }
+.select{
+    display: inline;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--grey);
+    background: none;
+    padding: 5px 0;
+    width: 80%;
+    font-size: 15px;
+}
+
 #contact .icon img {
     transform: rotate(90deg);
     width: 20px;
 }
+
 #contact .news {
     margin: 15px 0;
     border-bottom: 1px solid var(--grey);
