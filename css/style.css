@@ -213,10 +213,19 @@ nav ul a:hover {
 #nemesis .ennemis {
     text-align: center;
 }
-
+.nemesis-chauves{
+    width: 120px;
+    position: absolute;
+    left: 210px;
+    top: 1750px;
+    
+}
 /*design de la partie allie*/
-#allies , .justiceligue {
+ .justiceligue {
     margin-top: 40px;
+}
+#allies {
+    margin-top: 100px;
 }
 .batman-allie {
     display: flex;
@@ -245,6 +254,12 @@ nav ul a:hover {
     position: relative;
     z-index: 1;/*position de l'image De Justice ligue suivant l'axe z*/
     
+}
+.allie-batman {
+    position: absolute;
+    right: 0;
+    top: 2450px;
+    z-index: 5;
 }
 /*design du multimedia*/
 #multimedia .slider-multimedia{
